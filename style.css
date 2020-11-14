@@ -1,0 +1,195 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: 0.05em;
+}
+
+body {
+	max-width: 1440px;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*  Start nav bar */
+
+nav.nav {
+	background: rgb(27, 27, 27);
+	height: 50px;
+	overflow: hidden;
+	padding: 8px 2% 0 2%;
+	transition: 0.5s all;
+}
+
+nav.nav .container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav.nav .container .brand-name a h1 {
+	color: #fff;
+	font-weight: 600;
+	font-size: 1.7rem;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+nav.nav .container .brand-name a h1:hover {
+	text-shadow: 0 0 5px rgb(0, 174, 255);
+}
+
+nav.nav .container .home-btn {
+	width: 20%;
+	display: none;
+}
+
+nav.nav .container .btn {
+	float: right;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+nav.nav .container .navigation .nav-list {
+	list-style: none;
+	display: flex;
+	padding: 3px 0 0 0;
+}
+
+nav.nav .container .navigation .nav-list .nav-link {
+	text-decoration: none;
+}
+
+nav.nav .container .navigation .nav-list .nav-link .nav-li {
+	margin: 0 0.8rem;
+	padding: 0.3rem 0.9rem;
+	color: #fff;
+	overflow: hidden;
+	height: 29px;
+}
+
+nav.nav .container .navigation .nav-list .nav-link .nav-li .main-container {
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s all;
+}
+
+nav.nav
+	.container
+	.navigation
+	.nav-list
+	.nav-link
+	.nav-li:hover
+	.main-container {
+	transform: translateY(-24px);
+}
+
+nav.nav
+	.container
+	.navigation
+	.nav-list
+	.nav-link
+	.nav-li
+	.main-container
+	.hover {
+	color: rgb(0, 174, 255);
+	margin-top: 5px;
+}
+
+nav.nav .container .follow-btn .follow {
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 600;
+	background: rgb(0, 162, 255);
+	padding: 0.3rem 0.9rem;
+	border-radius: 12px;
+	text-shadow: 0 0 5px black;
+	border: 2px solid rgb(0, 162, 255);
+	transition: 0.3s all;
+}
+
+nav.nav .container .follow-btn .follow:hover {
+	background: none;
+}
+
+/*  End nav bar */
+
+header.header {
+	background-image: linear-gradient(
+			120deg,
+			rgba(0, 0, 0, 0.541),
+			rgba(0, 0, 0, 0.582)
+		),
+		url("./header_bg.jpg");
+	max-height: 850px;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+header.header .title {
+	text-align: center;
+	color: #fff;
+	font-size: 2rem;
+	padding-top: 15%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header.header .title2 {
+	text-align: center;
+	color: #fff;
+	font-size: 2.5rem;
+	padding-top: 0.5%;
+	font-weight: 600;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* If screen width grater then 1000px */
+@media only screen and (max-width: 1000px) {
+	nav.nav .container .home-btn {
+		display: block;
+	}
+
+	nav.nav .container .navigation {
+		width: 100%;
+	}
+	nav.nav .container .navigation .nav-list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.5rem;
+		text-align: center;
+	}
+
+	nav.nav .container .navigation .nav-list .nav-link .nav-li {
+		font-size: 1.25rem;
+		margin: 0.4rem 0;
+	}
+	nav.nav .container .navigation .nav-list .nav-link .nav-li:hover {
+		background: rgba(41, 41, 41, 0.164);
+	}
+
+	nav.nav
+		.container
+		.navigation
+		.nav-list
+		.nav-link
+		.nav-li:hover
+		.main-container {
+		background: rgba(41, 41, 41, 0.164);
+		transform: translateY(-30px);
+	}
+
+	nav.nav .container .follow-btn .follow {
+		margin-top: 1rem;
+	}
+}
